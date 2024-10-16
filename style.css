@@ -1,0 +1,605 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fafafa;
+}
+
+/* Контейнер */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Навигация */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 100;
+    top: 0;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #4e342e;
+    text-decoration: none;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li {
+    margin-left: 30px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-list li a:hover {
+    color: #6d4c41;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Главный баннер */
+.hero {
+    position: relative;
+    height: 100vh;
+    background-image: url('Bg_1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.btn {
+    padding: 15px 30px;
+    background-color: #6d4c41;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background 0.3s;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #5d4037;
+}
+
+/* Секции */
+.section {
+    padding: 60px 0;
+}
+
+/* Заголовки секций */
+.section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #4e342e;
+}
+
+/* Фоновые стили для секций */
+.care {
+    background-color: #f9f5f0;
+    background-image: repeating-linear-gradient(45deg, rgba(110, 74, 60, 0.05), rgba(110, 74, 60, 0.05) 10px, transparent 10px, transparent 20px);
+}
+.authenticity {
+
+    background-color: #f0ebe5;
+    background-image: radial-gradient(rgba(110, 74, 60, 0.1) 15%, transparent 16%), radial-gradient(rgba(110, 74, 60, 0.1) 15%, transparent 16%);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+}
+
+/* О нас */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.about-text, .about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text {
+    padding-right: 30px;
+}
+
+.about-text p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.stat {
+    text-align: center;
+    margin: 10px;
+}
+
+.stat h3 {
+    font-size: 2em;
+    color: #6d4c41;
+}
+
+.stat p {
+    font-size: 1em;
+    color: #777;
+    max-width: 200px;
+    margin: 10px auto 0;
+}
+
+/* Рекомендации по уходу */
+.care-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.care-card {
+    background-color: #fff;
+    width: 250px;
+    margin: 15px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.care-card i {
+    font-size: 2.5em;
+    color: #6d4c41;
+    margin-bottom: 15px;
+}
+
+.care-card h3 {
+    font-size: 1.2em;
+    color: #4e342e;
+    margin-bottom: 10px;
+}
+
+.care-card p {
+    font-size: 1em;
+    color: #555;
+}
+
+.care-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.care-contact {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.care-contact p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.care-contact a {
+    color: #6d4c41;
+    text-decoration: none;
+}
+
+.care-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Адаптивность для карточек */
+@media (max-width: 992px) {
+    .care-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .care-card {
+        width: calc(100% - 30px); /* Вычитает суммарные горизонтальные отступы */
+        max-width: 400px;
+        margin: 15px;
+    }
+}
+
+/* Наши работы */
+.works {
+    background-color: #f0ebe5;
+    /* Добавьте фоновые узоры, если необходимо */
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -10px; 
+}
+
+.gallery-item {
+    flex: 1 1 calc(33.333% - 20px); 
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover; 
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.3); 
+}
+.gallery-caption {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    font-size: 0.9em;
+    text-align: center;
+}
+/* Модальное окно */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Включает прокрутку при необходимости */
+    background-color: rgba(0, 0, 0, 0.9); /* Затемненный фон */
+}
+
+.modal-content {
+    display: block;
+    margin: 5% auto;
+    max-width: 90%;
+    max-height: 80vh;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #bbb;
+}
+
+#modal-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+/* Кнопки навигации */
+.modal-prev, .modal-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 40px;
+    transition: color 0.3s;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.modal-prev {
+    left: 20px;
+}
+
+.modal-next {
+    right: 20px;
+}
+
+.modal-prev:hover, .modal-next:hover {
+    color: #bbb;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .gallery-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery-item {
+        flex: 1 1 calc(100% - 20px); /* Одна колонка на маленьких экранах */
+    }
+}
+
+
+
+/* Как отличить натуральную кожу */
+.authenticity-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.auth-card {
+    background-color: #fff;
+    width: 220px;
+    margin: 15px;
+    padding: 20px 15px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+.auth-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+}
+.auth-card i {
+    font-size: 2.5em;
+    color: #6d4c41;
+    margin-bottom: 10px;
+}
+
+.auth-card h3 {
+    font-size: 1.2em;
+    color: #4e342e;
+    margin-bottom: 5px;
+}
+
+.auth-card p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Контакты */
+.contact-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background-color: #fff;
+    width: 200px;
+    margin: 15px;
+    padding: 20px 15px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.contact-card i {
+    font-size: 2em;
+    color: #6d4c41;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    font-size: 1em;
+    color: #555;
+}
+
+.contact-card a {
+    text-decoration: none;
+    color: #6d4c41;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Футер */
+footer {
+    background-color: #4e342e;
+    color: #fff;
+    padding: 15px 0;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.social-links li {
+    margin: 0 10px;
+}
+
+.social-links li a {
+    color: #fff;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.social-links li a:hover {
+    color: #d7ccc8;
+}
+
+/* Анимации */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .about-content, .care-content {
+        flex-direction: column;
+    }
+
+    .about-text, .care-steps {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .care-content {
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-list {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100% - 70px);
+        background-color: rgba(255, 255, 255, 0.95);
+        flex-direction: column;
+        align-items: center;
+        transition: left 0.3s;
+        z-index: 99;
+    }
+
+    .nav-list.active {
+        left: 0;
+    }
+
+    .nav-list li {
+        margin: 15px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle.active i {
+        transform: rotate(90deg);
+    }
+
+    /* Карусель */
+    .carousel-control {
+        padding: 8px;
+    }
+
+    .carousel-control i {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+
+    .stat h3 {
+        font-size: 1.8em;
+    }
+
+    .auth-card, .contact-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
